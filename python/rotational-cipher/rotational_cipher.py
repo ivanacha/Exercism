@@ -13,7 +13,7 @@ def rotate(text, key):
     Returns:
         str: The encrypted text after applying the rotational cipher.
     """
-    cipher = ""
+    cipher = []
     for char in text:
         if char.isalpha():
             # Calculate the shift value for the current character
@@ -29,10 +29,10 @@ def rotate(text, key):
             (ord(char) - ord('a') + shift) % 26 + ord('a') gets the new character after shifting by the specified number of positions
             """
             if char.islower():
-                cipher += chr((ord(char) - ord('a') + shift) % 26 + ord('a'))
+                cipher.append(chr((ord(char) - ord('a') + shift) % 26 + ord('a')))
             elif char.isupper():
-                cipher += chr((ord(char) - ord('A') + shift) % 26 + ord('A'))
+                cipher.append(chr((ord(char) - ord('A') + shift) % 26 + ord('A')))
         else:
             # Non-alphabetic characters are not modified
-            cipher += char
-    return cipher
+            cipher.append(char)
+    return ''.join(cipher)

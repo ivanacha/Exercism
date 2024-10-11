@@ -43,7 +43,22 @@ url_counts = [
     "1,google.com"
 ] 
 
+counts = [
+     "50,google.com",
+    "60,yahoo.com",
+    "10,yahoo.com",
+    "1,wikipedia.org",
+    "40,sports.yahoo.com",
+    "300,yahoo.com",
+    "2,wikipedia.org",
+    "1,stackoverflow.com",
+    "1,google.com"
+ ]
 
+url_google = "50,google.com"
+url_yahoo = "300,yahoo.com"
+url_yahoosports = "40,sports.yahoo.com"
+url_wikipedia = "2,wikipedia.org"
 
 
 
@@ -52,7 +67,7 @@ def counter(url):
     for char in url:
         if char.isdigit():
             count += char
-        if char == ',':
+        else:
             break          
     return int(count)
 

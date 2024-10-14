@@ -75,7 +75,7 @@ def get_width(image):
 def find_rectangle(image):
     for row in range(len(image)):
         for col in range(len(image[row])):
-            return first_zero(image[row])
+            return (first_zero(image[row], col))
                    
           
 image1 = [

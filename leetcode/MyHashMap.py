@@ -38,4 +38,16 @@ At most 104 calls will be made to put, get, and remove.
 '''
 
 class MyHahsmap:
+    def __init__(self):
+        pass
     
+    def put(key, element):
+        pass
+
+    def get(element):
+        pass
+    
+    def remove(element):
+        pass
+
+
